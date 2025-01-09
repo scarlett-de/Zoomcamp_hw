@@ -1,6 +1,6 @@
 
 
-## Table of contents
+# Table of contents
 
 - [Question 1](#question-1)
 - [Question 2](#question-2)
@@ -366,3 +366,11 @@ Options:
                                          container
 ```
 ### `--rm` is the one shows Automatically remove the container when it exits
+
+
+## Question 2
+I run python:3.9 in an interactive mode and the entrypoint of bash using the following command: 
+```ssh
+docker run -it --entrypoint=bash python:3.9
+```
+and I use `pip list` to check wheel version, my verison is 0.44.0. 
