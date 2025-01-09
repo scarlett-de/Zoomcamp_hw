@@ -365,3 +365,4 @@ Options:
   -w, --workdir string                   Working directory inside the
                                          container
 ```
+### `--rm` is the one shows Automatically remove the container when it exits
