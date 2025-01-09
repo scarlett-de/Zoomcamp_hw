@@ -7,11 +7,7 @@
 - [Question 3](#question-3)
 
 ## Question 1
-The information I got after ran
-```ssh
-docker --help
-```
-is below:
+The information I got after ran `docker --help` is below:
 
 ```ssh
 Usage:  docker [OPTIONS] COMMAND
