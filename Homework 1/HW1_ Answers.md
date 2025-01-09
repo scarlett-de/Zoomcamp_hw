@@ -6,8 +6,8 @@
 - [Question 2](#question-2)
 - [Question 3](#question-3)
 
-### Question 1
-The information I got after ran `docker --help` is below:
+## Question 1
+### The information I got after ran `docker --help` is below:
 
 ```ssh
 Usage:  docker [OPTIONS] COMMAND
@@ -107,10 +107,10 @@ Global Options:
 Run 'docker COMMAND --help' for more information on a command.
 
 For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+```
 
 
-
-The information after I run `docker build --help` is as below:
+### The information after I run `docker build --help` is as below:
 
 
 ```ssh
@@ -182,7 +182,7 @@ Experimental commands and flags are hidden. Set BUILDX_EXPERIMENTAL=1 to show th
 
 
 
-The information after I run `docker run --help` is as below:
+### The information after I run `docker run --help` is as below:
 
 ```ssh
 
