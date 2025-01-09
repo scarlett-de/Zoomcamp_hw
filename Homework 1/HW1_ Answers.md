@@ -1,12 +1,9 @@
 ## Question 1
 
-Run the command to get information
-```ssh
-docker --help
+
 ```
 The information I got after ran ```ssh
-docker --help
-``` is below:
+docker --help``` is below:
 Usage:  docker [OPTIONS] COMMAND
 
 A self-sufficient runtime for containers
