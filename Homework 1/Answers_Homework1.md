@@ -3,10 +3,13 @@
 # Table of contents
 
 - [Question 1. Knowing docker tags](#Question-1-Knowing-docker-tags)
-- [Question 2](#question-2)
-- [Question 3](#question-3)
-- [Question 4](#question-4)
+- [Question 2. Understanding docker first run](#Question-2-Understanding-docker-first-run)
+- [Question 3. Count records](#Question-3-Count-records)
+- [Question 4. Longest trip for each day](#Question-4-Longest-trip-for-each-day)
+- [Question 5. Three biggest pick up Boroughs](#Question-5-Three-biggest-pick-up-Boroughs)
+- [Question 6. Largest tip](#Question-6-Largest-tip)
 
+  
 ## Question 1. Knowing docker tags
 
 <div style="display: inline-block; width: 45%; vertical-align: top; padding: 10px;">
