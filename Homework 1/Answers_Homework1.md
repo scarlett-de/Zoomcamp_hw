@@ -410,3 +410,10 @@ I use jupter to ingest zones data, please see ***ingest_zone_lookup.ipynb***
 
 
 ## Question 3
+The count is 15126
+
+I use the following code to get the count:
+```sql
+select count(1) from green_taxi_trips 
+where date(lpep_pickup_datetime)='2019-09-18' or date(lpep_dropoff_datetime)='2019-09-18'
+```
