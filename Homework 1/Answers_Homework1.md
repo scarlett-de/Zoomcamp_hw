@@ -185,11 +185,14 @@ Options:
 
 Experimental commands and flags are hidden. Set BUILDX_EXPERIMENTAL=1 to show them.
 ```
-
 </details>
 </div>
 
-***The information after I run `docker run --help` is as below:***
+
+
+<div style="display: inline-block; width: 45%; vertical-align: top; padding: 10px;">
+  <details>
+  <summary>Click to see the information I got after run `docker run--help`</summary>
 
 ```ssh
 
@@ -372,6 +375,9 @@ Options:
   -w, --workdir string                   Working directory inside the
                                          container
 ```
+ </details>
+</div>
+
 ***`--rm` is the one shows Automatically remove the container when it exits***
 
 
