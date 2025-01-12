@@ -7,7 +7,10 @@
 - [Question 3](#question-3)
 
 ## Question 1
- ***The information I got after run `docker --help` is as below:***
+
+
+<details>
+  <summary>Click to see the information I got after run `docker --help`</summary>
 
 ```ssh
 Usage:  docker [OPTIONS] COMMAND
@@ -420,18 +423,6 @@ select count(1) from green_taxi_trips
 where date(lpep_pickup_datetime)='2019-09-18' and date(lpep_dropoff_datetime)='2019-09-18'
 ```
 
-
-
-<details>
-  <summary>Click to expand for SQL Example</summary>
-
-  Here's an SQL query that selects all users with an age greater than 30:
-
-  ```sql
-  SELECT name, age
-  FROM users
-  WHERE age > 30
-  ORDER BY name;
 
 I use the following code to get the count:
 
