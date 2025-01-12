@@ -423,7 +423,8 @@ docker run -it \
 ### ingest zones data
 I use jupter to ingest zones data, please see ***ingest_zone_lookup.ipynb***
 
-And check on pgAdmin if data loaded properly. 
+And check on pgAdmin if datas are loaded properly. 
+
 ![image](https://github.com/user-attachments/assets/29fc5643-3a6d-4e11-8d33-4cf92c0cfa84)
 
 
