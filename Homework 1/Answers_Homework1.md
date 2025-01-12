@@ -435,7 +435,8 @@ The count of taxi trips were totally made on September 18th 2019 is ***15612***.
 I use the following sql query:
 
 ```sql
-select count(1) from green_taxi_trips 
+select count(1)
+from green_taxi_trips 
 where date(lpep_pickup_datetime)='2019-09-18' and date(lpep_dropoff_datetime)='2019-09-18'
 
 ```
