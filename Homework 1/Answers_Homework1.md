@@ -441,7 +441,7 @@ where date(lpep_pickup_datetime)='2019-09-18' and date(lpep_dropoff_datetime)='2
 ```
 
 ## Question 4. Longest trip for each day
-The day with longest trip distance is ***2019-09-26***
+The day with longest trip distance is ***2019-09-26***.
 I use the following sql query: 
 
 ```sql
@@ -452,4 +452,50 @@ from green_taxi_trips
 group by date(lpep_pickup_datetime)
 order by max_distance desc
 limit 1;
-``` 
+```
+
+## Question 5. Three biggest pick up Boroughs
+***Brooklyn, Manhattan Queens*** were the three pick up boroughs that had a sum of total_amount superior to 50000.
+
+```sql
+with CTE as (
+select
+    lpep_pickup_datetime,
+    total_amount,
+	  zpu."Borough" as pickup_borough
+from green_taxi_trips t 
+left join zones zpu on t."PULocationID" = zpu."LocationID"
+where date(lpep_pickup_datetime) ='2019-09-18'
+)
+
+select sum(total_amount), pickup_borough
+from CTE
+group by pickup_borough
+having sum(total_amount)>50000;
+```
+## Question 6. Largest tip
+For the passengers picked up in September 2019 in the zone name Astoria ***JFK Airport*** was the drop off zone that had the largest tip.
+
+I use the following sql query: 
+```sql
+with CTE as (
+select
+    lpep_pickup_datetime,
+    lpep_dropoff_datetime,
+    tip_amount,
+    zpu."Zone" as pickup_zone,
+    zdo."Zone" as dropoff_zone
+from green_taxi_trips t 
+   left join zones zpu on t."PULocationID" = zpu."LocationID"
+   left join zones zdo on t."DOLocationID" = zdo."LocationID"
+where extract(month from lpep_pickup_datetime) = 9
+and zpu."Zone"='Astoria'
+)
+select max(tip_amount), dropoff_zone
+from CTE
+group by dropoff_zone
+order by max(tip_amount) desc
+limit 1;
+```
+
+
