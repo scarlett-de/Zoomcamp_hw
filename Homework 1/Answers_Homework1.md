@@ -7,7 +7,7 @@
 - [Question 3](#question-3)
 
 ## Question 1
-### The information I got after run `docker --help` is as below:
+ ***The information I got after run `docker --help` is as below:***
 
 ```ssh
 Usage:  docker [OPTIONS] COMMAND
@@ -110,7 +110,7 @@ For more help on how to use Docker, head to https://docs.docker.com/go/guides/
 ```
 
 
-### The information after I run `docker build --help` is as below:
+***The information after I run `docker build --help` is as below:***
 
 
 ```ssh
@@ -182,7 +182,7 @@ Experimental commands and flags are hidden. Set BUILDX_EXPERIMENTAL=1 to show th
 
 
 
-### The information after I run `docker run --help` is as below:
+***The information after I run `docker run --help` is as below:***
 
 ```ssh
 
@@ -365,7 +365,7 @@ Options:
   -w, --workdir string                   Working directory inside the
                                          container
 ```
-### `--rm` is the one shows Automatically remove the container when it exits
+***`--rm` is the one shows Automatically remove the container when it exits***
 
 
 ## Question 2
