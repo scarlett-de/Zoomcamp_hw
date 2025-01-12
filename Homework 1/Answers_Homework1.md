@@ -378,7 +378,8 @@ Options:
  </details>
 </div>
 
-***`--rm` is the one shows Automatically remove the container when it exits***
+`--rm` is the one shows Automatically remove the container when it exits
+
 
 
 ## Question 2
