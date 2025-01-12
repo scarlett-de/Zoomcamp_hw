@@ -10,7 +10,7 @@
 
 <div style="display: inline-block; width: 45%; vertical-align: top; padding: 10px;">
   <details>
-  <summary>Click to see the information I got after run `docker --help`</summary>
+  <summary>Click to see the information I get after run `docker --help`</summary>
 
 ```ssh
 Usage:  docker [OPTIONS] COMMAND
