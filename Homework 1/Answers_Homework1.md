@@ -6,7 +6,7 @@
 - [Question 2](#question-2)
 - [Question 3](#question-3)
 
-## Question 1
+## Question 1. Knowing docker tags
 
 <div style="display: inline-block; width: 45%; vertical-align: top; padding: 10px;">
   <details>
@@ -382,7 +382,7 @@ Options:
 
 
 
-## Question 2
+## Question 2. Understanding docker first run
 
 I run python:3.9 in an interactive mode and the entrypoint of bash using the following command: 
 ```ssh
@@ -391,6 +391,7 @@ docker run -it --entrypoint=bash python:3.9
 and I use `pip list` to check wheel version, my verison is 0.44.0. 
 
 
+### Prepare Postgres
 ### Steps to ingest green taxi trips data
 
 Step 1: create a yaml file(***docker-compose.yaml***) to set up Postgres and pgAdmin so that I can manage the database through web browser.
@@ -426,14 +427,8 @@ And check on pgAdmin if data loaded properly.
 ![image](https://github.com/user-attachments/assets/29fc5643-3a6d-4e11-8d33-4cf92c0cfa84)
 
 
-## Question 3
+## Question 3. Count records
 The count of taxi trips were totally made on September 18th 2019 is ***15612***.
-
-```sql
-select count(1) from green_taxi_trips 
-where date(lpep_pickup_datetime)='2019-09-18' and date(lpep_dropoff_datetime)='2019-09-18'
-```
-
 
 I use the following code to get the count:
 
