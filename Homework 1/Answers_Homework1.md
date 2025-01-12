@@ -8,8 +8,8 @@
 
 ## Question 1
 
-
-<details>
+<div style="display: inline-block; width: 45%; vertical-align: top; padding: 10px;">
+  <details>
   <summary>Click to see the information I got after run `docker --help`</summary>
 
 ```ssh
@@ -111,9 +111,11 @@ Run 'docker COMMAND --help' for more information on a command.
 
 For more help on how to use Docker, head to https://docs.docker.com/go/guides/
 ```
+  </details>
+</div>
 
-
-<details>
+<div style="display: inline-block; width: 45%; vertical-align: top; padding: 10px;">
+  <details>
   <summary>Click to see the information I get after I run `docker build --help`</summary>
 
 
@@ -184,7 +186,8 @@ Options:
 Experimental commands and flags are hidden. Set BUILDX_EXPERIMENTAL=1 to show them.
 ```
 
-
+</details>
+</div>
 
 ***The information after I run `docker run --help` is as below:***
 
