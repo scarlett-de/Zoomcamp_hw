@@ -406,4 +406,7 @@ docker run -it \
   --url="$URL"
 ```
 ### ingest zones data
-I use jupter to ingest zones data (***ingest_zone_lookup.ipynb***)
+I use jupter to ingest zones data, please see ***ingest_zone_lookup.ipynb***
+
+
+## Question 3
