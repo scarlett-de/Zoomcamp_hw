@@ -431,9 +431,24 @@ And check on pgAdmin if datas are loaded properly.
 ## Question 3. Count records
 The count of taxi trips were totally made on September 18th 2019 is ***15612***.
 
-I use the following code to get the count:
+I use the following sql query:
 
 ```sql
 select count(1) from green_taxi_trips 
 where date(lpep_pickup_datetime)='2019-09-18' and date(lpep_dropoff_datetime)='2019-09-18'
+
 ```
+
+## Question 4. Longest trip for each day
+The day with longest trip distance is ***2019-09-26***
+I use the following sql query: 
+
+```sql
+select
+    date(lpep_pickup_datetime) as pickup_date,
+    max(trip_distance) as max_distance
+from green_taxi_trips
+group by date(lpep_pickup_datetime)
+order by max_distance desc
+limit 1;
+``` 
