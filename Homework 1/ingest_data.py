@@ -1,11 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-
-#pip install pandas
-
-#pip install sqlalchemy
-
 import os
 import argparse
 import pandas as pd
@@ -61,9 +53,6 @@ def main(params):
           t_end=time()
     
           print('inserted another chunk...,took %.3f second' %(t_end-t_start))
-
-
-
 
 #main block python
 
