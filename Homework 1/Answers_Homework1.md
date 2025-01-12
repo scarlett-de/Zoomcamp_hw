@@ -110,10 +110,11 @@ Global Options:
 Run 'docker COMMAND --help' for more information on a command.
 
 For more help on how to use Docker, head to https://docs.docker.com/go/guides/
-;
+```
 
 
-***The information after I run `docker build --help` is as below:***
+<details>
+  <summary>Click to see the information I get after I run `docker build --help`</summary>
 
 
 ```ssh
