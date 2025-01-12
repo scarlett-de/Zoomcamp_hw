@@ -408,6 +408,9 @@ docker run -it \
 ### ingest zones data
 I use jupter to ingest zones data, please see ***ingest_zone_lookup.ipynb***
 
+And check on pgAdmin if data loaded properly. 
+![image](https://github.com/user-attachments/assets/29fc5643-3a6d-4e11-8d33-4cf92c0cfa84)
+
 
 ## Question 3
 The count of taxi trips were totally made on September 18th 2019 is ***15612***.
