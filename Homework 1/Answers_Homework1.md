@@ -369,11 +369,13 @@ Options:
 
 
 ## Question 2
+
 I run python:3.9 in an interactive mode and the entrypoint of bash using the following command: 
 ```ssh
 docker run -it --entrypoint=bash python:3.9
 ```
 and I use `pip list` to check wheel version, my verison is 0.44.0. 
+
 
 ### Steps to ingest green taxi trips data
 
@@ -382,13 +384,13 @@ and then run `docker-compose up -d` to set up postgres
 
 Step 2: Log on to pgAdmin http://localhost:8080 and register a server
 
-Step 3: create a python script(***ingest_data.py***) to automate the process of downloading, tranformaing and loading to postgres. 
+Step 3: create a python script (***ingest_data.py***) to automate the process of downloading, tranformaing and loading to postgres. 
 
 Step 4: create a dockerfile (***dockerfile***) to indicate the instructions of creating an docker image.
+Run `docker build -t taxi_ingest:v001 . ` to create a docker image
 
-Step 5: run `docker build -t taxi_ingest:v001 . ` to create a docker image
+Step 5: run the below command to ingest Green Taxi data
 
-Step 6: run the below command to ingest Green Taxi data
 ```ssh
 URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-09.csv.gz"
 
@@ -403,5 +405,5 @@ docker run -it \
   --table_name=green_taxi_trips \ 
   --url="$URL"
 ```
-
-
+### ingest zones data
+I use jupter to ingest zones data (***ingest_zone_lookup.ipynb***)
