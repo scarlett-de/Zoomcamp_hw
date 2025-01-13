@@ -3,7 +3,7 @@
 # Table of contents
 
 - [Question 1. Understanding docker first run](#Question-1-Understanding-docker-first-run)
-- [Question 2. Understanding Docker networking and docker-composeUnderstanding docker first run](#Question-2-Understanding-Docker-networking-and-docker-compose)
+- [Question 2. Understanding Docker networking and docker-compose](#Question-2-Understanding-Docker-networking-and-docker-compose)
 - [Question 3. Trip Segmentation Count](#Question-3-Trip-Segmentation-Count)
 - [Question 4. Longest trip for each day](#Question-4-Longest-trip-for-each-day)
 - [Question 5. Three biggest pick up zones](#Question-5-Three-biggest-pick-up-zones)
