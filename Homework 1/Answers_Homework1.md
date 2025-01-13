@@ -2,7 +2,7 @@
 
 # Table of contents
 
-- [Question 1. Knowing docker tags](#Question-1-Knowing-docker-tags)
+- [Question 1. Question 1. Understanding docker first run](#Question-1-Understanding-docker-first-run)
 - [Question 2. Understanding docker first run](#Question-2-Understanding-docker-first-run)
 - [Question 3. Count records](#Question-3-Count-records)
 - [Question 4. Longest trip for each day](#Question-4-Longest-trip-for-each-day)
@@ -10,7 +10,7 @@
 - [Question 6. Largest tip](#Question-6-Largest-tip)
 
   
-## Question 1. Knowing docker tags
+## Question 1. Understanding docker first run
 
 <div style="display: inline-block; width: 45%; vertical-align: top; padding: 10px;">
   <details>
