@@ -11,14 +11,7 @@
 
   
 ## Question 1. Understanding docker first run
-I do not have python:3.12.8 image on my docker hub. So I went to the below site to get the dockerfile of building a python:3.12.8 image.  https://github.com/docker-library/python/blob/23c83c5a82646e123df33d056f7dfbe1d78cfc8b/3.12/bookworm/Dockerfile
-
-and then run below command to build an image.
-```ssh
-docker build -t python:3.18.2 .
-```
-
-And then use below command to run python:3.12.8 in an interactive mode and the entrypoint of bash: 
+I use below command to run python:3.12.8 in an interactive mode and the entrypoint of bash: 
 ```ssh
 docker run -it --entrypoint=bash python:3.12.8
 ```
