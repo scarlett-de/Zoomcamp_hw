@@ -8,6 +8,7 @@
 - [Question 4. Longest trip for each day](#Question-4-Longest-trip-for-each-day)
 - [Question 5. Three biggest pick up zones](#Question-5-Three-biggest-pick-up-zones)
 - [Question 6. Largest tip](#Question-6-Largest-tip)
+- [Question 7. Terraform Workflow](#Question 7. Terraform Workflow) 
 
   
 ## Question 1. Understanding docker first run
