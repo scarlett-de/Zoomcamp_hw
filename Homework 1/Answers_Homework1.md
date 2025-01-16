@@ -161,7 +161,7 @@ order by max(tip_amount) desc
 limit 1;
 ```
 
-##Question 7. Terraform Workflow
+## Question 7. Terraform Workflow
 ***terraform init, terraform apply -auto-approve, terraform destroy*** describes the workflow for
 Downloading the provider plugins and setting up backend,
 Generating proposed changes and auto-executing the plan
