@@ -163,9 +163,9 @@ limit 1;
 
 ## Question 7. Terraform Workflow
 ***terraform init, terraform apply -auto-approve, terraform destroy*** describes the workflow for
-Downloading the provider plugins and setting up backend,
-Generating proposed changes and auto-executing the plan
-Remove all resources managed by terraform`
+1. Downloading the provider plugins and setting up backend.
+2. Generating proposed changes and auto-executing the plan.
+3. Remove all resources managed by terraform.
 
 
 
