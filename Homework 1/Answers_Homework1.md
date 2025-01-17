@@ -72,35 +72,18 @@ During the period of October 1st 2019 (inclusive) and November 1st 2019 (exclusi
 I use the following sql query:
 
 ```sql
---Up to 1 mile
-select count(*) from green_taxi_trips
-where DATE(lpep_pickup_datetime) >= '2019-10-01' AND DATE(lpep_pickup_datetime) < '2019-11-01'
-and DATE(lpep_dropoff_datetime) >= '2019-10-01' AND DATE(lpep_dropoff_datetime) < '2019-11-01'
-and trip_distance<=1
+select 
+  case when trip_distance<=1 then '1. Up to 1 mile'
+  when trip_distance>1 and trip_distance<=3 then '2. In between 1 and 3 miles'
+  when trip_distance>3 and trip_distance<=7 then '3. In between 3 and 7 miles'
+  when trip_distance>7 and trip_distance<=10 then '4. In between 7 and 10 miles'
+  when trip_distance>10 then '5. Over 10 miles'
+ end as distance_category,
+count(*) from green_taxi_trips
 
---In between 1 (exclusive) and 3 miles (inclusive),
-select count(*) from green_taxi_trips
 where DATE(lpep_pickup_datetime) >= '2019-10-01' AND DATE(lpep_pickup_datetime) < '2019-11-01'
 and DATE(lpep_dropoff_datetime) >= '2019-10-01' AND DATE(lpep_dropoff_datetime) < '2019-11-01'
-and trip_distance>1 and trip_distance<=3
-
---In between 3 (exclusive) and 7 miles (inclusive),
-select count(*) from green_taxi_trips
-where DATE(lpep_pickup_datetime) >= '2019-10-01' AND DATE(lpep_pickup_datetime) < '2019-11-01'
-and DATE(lpep_dropoff_datetime) >= '2019-10-01' AND DATE(lpep_dropoff_datetime) < '2019-11-01'
-and trip_distance>3 and trip_distance<=7
-
---In between 7 (exclusive) and 10 miles (inclusive),
-select count(*) from green_taxi_trips
-where DATE(lpep_pickup_datetime) >= '2019-10-01' AND DATE(lpep_pickup_datetime) < '2019-11-01'
-and DATE(lpep_dropoff_datetime) >= '2019-10-01' AND DATE(lpep_dropoff_datetime) < '2019-11-01'
-and trip_distance>7 and trip_distance<=10
-
---Over 10 miles
-select count(*) from green_taxi_trips
-where DATE(lpep_pickup_datetime) >= '2019-10-01' AND DATE(lpep_pickup_datetime) < '2019-11-01'
-and DATE(lpep_dropoff_datetime) >= '2019-10-01' AND DATE(lpep_dropoff_datetime) < '2019-11-01'
-and trip_distance>10
+group by distance_category
 ```
 
 ## Question 4. Longest trip for each day
