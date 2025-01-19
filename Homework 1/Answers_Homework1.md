@@ -62,6 +62,7 @@ And check on pgAdmin if datas are loaded properly.
 
 ## Question 3. Trip Segmentation Count
 During the period of October 1st 2019 (inclusive) and November 1st 2019 (exclusive),  trips happened:
+104,802; 198,924; 109,603; 27,678; 35,189
 
 1. Up to 1 mile: (***104,802***)
 2. In between 1 (exclusive) and 3 miles (inclusive): (***198,924***)
@@ -119,6 +120,7 @@ from CTE
 group by pickup_loc
 having sum(total_amount)>13000;
 ```
+
 ## Question 6. Largest tip
 For the passengers picked up in October 2019 in the zone name East Harlem North,  ***JFK Airport*** was the drop off zone that had the largest tip.
 
@@ -150,6 +152,7 @@ limit 1;
 2. Generating proposed changes and auto-executing the plan.
 3. Remove all resources managed by terraform.
 
+Please see main.tf and variables.tf for the files I used to build GCP bucket and dataset.
 
 
 
