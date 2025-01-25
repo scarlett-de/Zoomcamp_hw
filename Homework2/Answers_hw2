@@ -1,0 +1,16 @@
+## Question 1
+I commented out purge files in the example yaml file, and use the one attached (02_postgres_taxi.yml) to ingest yellow_tripdata_2020-12.csv. 
+and I checked 
+
+
+
+
+
+## Question 3
+I use the following sql to count Yellow Taxi data for all CSV files in the year 2020?
+
+```sql
+SELECT COUNT(*)
+FROM yellow_tripdata
+WHERE filename LIKE 'yellow_tripdata_2020-%';
+```
