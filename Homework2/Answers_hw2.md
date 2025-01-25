@@ -18,3 +18,15 @@ SELECT COUNT(*)
 FROM yellow_tripdata
 WHERE filename LIKE 'yellow_tripdata_2020-%';
 ```
+
+## Question 4
+I used the 02_postgres_taxi_scheduled.yml to ingest green taxi data. I clicked on Backfill executions, and selected date from 2020-01-01 to 2020-12-31 and then executed. 
+![image](https://github.com/user-attachments/assets/0985b629-3f77-4a79-bc40-bb9abc2d3f98)
+
+Then I ran the following sql code:
+```sql
+SELECT COUNT(*)
+FROM green_tripdata
+WHERE filename LIKE 'green_tripdata_2020-%';
+```
+There are 1,734,051 rows for the Green Taxi data for all CSV files in the year 2020.
