@@ -1,3 +1,7 @@
+Steps to install Kestra, set up Postgres and PGAdmin
+
+I use the docker-compose-kestra to install kestra. And I use the database I created in the last module, 
+
 ## Question 1
 I commented out purge files in the example yaml file, and use the one attached (02_postgres_taxi.yml) to ingest yellow_tripdata_2020-12.csv. 
 and I checked logs in the executions, the file size is **128.3MB**. 
