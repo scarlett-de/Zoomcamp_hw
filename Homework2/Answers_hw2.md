@@ -30,3 +30,9 @@ FROM green_tripdata
 WHERE filename LIKE 'green_tripdata_2020-%';
 ```
 There are 1,734,051 rows for the Green Taxi data for all CSV files in the year 2020.
+
+## Question 5
+
+
+## Question 6
+Add a timezone property set to **America/New_York** in the Schedule trigger configuration
