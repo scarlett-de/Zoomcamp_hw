@@ -11,7 +11,7 @@ The file name should be **green_tripdata_2020-04.csv**.
 
 
 ## Question 3
-I use the following sql to count Yellow Taxi data for all CSV files in the year 2020.
+I run the below sql to count Yellow Taxi data for all CSV files in the year 2020.
 There are **24,648,499** rows in total.
 
 ```sql
@@ -21,20 +21,19 @@ WHERE filename LIKE 'yellow_tripdata_2020-%';
 ```
 
 ## Question 4
-I used the 02_postgres_taxi_scheduled.yml to ingest green taxi data. I clicked on Backfill executions, and selected date from 2020-01-01 to 2020-12-31 and then executed. 
-![image](https://github.com/user-attachments/assets/0985b629-3f77-4a79-bc40-bb9abc2d3f98)
 
-Then I ran the following sql code:
+Then I ran the below sql code to count rows for Green Taxi data for all CSV files in the year 2020:
 ```sql
 SELECT COUNT(*)
 FROM green_tripdata
 WHERE filename LIKE 'green_tripdata_2020-%';
 ```
-There are 1,734,051 rows for the Green Taxi data for all CSV files in the year 2020.
+There are **1,734,051** rows.
+
 
 ## Question 5
 I use the following sql to count Yellow Taxi data for the March 2021 CSV file.
-There are 1,925,152 rows.
+There are **1,925,152** rows.
 
 ```sql
 SELECT COUNT(*)
