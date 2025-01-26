@@ -32,7 +32,14 @@ WHERE filename LIKE 'green_tripdata_2020-%';
 There are 1,734,051 rows for the Green Taxi data for all CSV files in the year 2020.
 
 ## Question 5
+I use the following sql to count Yellow Taxi data for the March 2021 CSV file.
+There are 1,925,152 rows.
 
+```sql
+SELECT COUNT(*)
+FROM yellow_tripdata
+WHERE filename = 'yellow_tripdata_2021-03.csv';
+```
 
 ## Question 6
 Add a timezone property set to **America/New_York** in the Schedule trigger configuration
