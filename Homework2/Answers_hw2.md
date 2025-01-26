@@ -1,6 +1,8 @@
 Steps to install Kestra, set up Postgres and PGAdmin
 
-I use the docker-compose-kestra to install kestra. And I use the database I created in the last module, 
+I use the docker-compose-kestra.yaml to install kestra. And I use docker-compose-pg.yaml to set up Postgres and PGAdmin. 
+When register server in PGAdmin, I use localhost, and root as user name and root as password. 
+and change default plugins to ny_taxi database. 
 
 ## Question 1
 I commented out purge files in the example yaml file, and use the one attached (02_postgres_taxi.yml) to ingest yellow_tripdata_2020-12.csv. 
