@@ -3,7 +3,11 @@
 I commented out purge files in the example yaml file, and use the one attached (02_postgres_taxi.yml) to ingest yellow_tripdata_2020-12.csv. 
 and I checked logs in the executions, the file size is **128.3MB**. 
 
+
 <img width="688" alt="Screenshot 2025-01-24 at 9 45 13 PM" src="https://github.com/user-attachments/assets/8c0be769-84bd-4371-8a88-c51128c73f3e" />
+
+or check 
+<img width="688" alt="Screenshot 2025-01-24 at 9 45 13 PM" src="https://github.com/user-attachments/assets/cb557b4b-b644-46b7-a0ac-7fb0cab79afa"  />
 
 
 ## Question 2 
