@@ -6,7 +6,8 @@ and I checked logs in the executions, the file size is **128.3MB**.
 
 <img width="688" alt="Screenshot 2025-01-24 at 9 45 13 PM" src="https://github.com/user-attachments/assets/8c0be769-84bd-4371-8a88-c51128c73f3e" />
 
-or check 
+or check on GCS 
+
 <img width="688" alt="Screenshot 2025-01-24 at 9 45 13 PM" src="https://github.com/user-attachments/assets/cb557b4b-b644-46b7-a0ac-7fb0cab79afa"  />
 
 
