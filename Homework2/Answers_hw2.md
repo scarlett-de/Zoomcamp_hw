@@ -1,3 +1,6 @@
+# Ingest data using Kestra
+I used docker-compose-kestra and docker-compose-pg to set up Kestra and Postgres. And I run postgres_taxi.yaml to ingest files individually and use the postgres_taxi_scheduled to ingest csv by backfill. 
+
 
 ## Question 1
 I commented out purge files in the example yaml file, and use the one attached (02_postgres_taxi.yml) to ingest yellow_tripdata_2020-12.csv. 
