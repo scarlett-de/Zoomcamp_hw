@@ -27,13 +27,14 @@ WHERE filename LIKE 'yellow_tripdata_2020-%';
 
 ## Question 4
 
-Then I ran the below sql code to count rows for Green Taxi data for all CSV files in the year 2020:
+Then I ran the below sql code to count rows for Green Taxi data for all CSV files in the year 2020.
+There are **1,734,051** rows.
+
 ```sql
 SELECT COUNT(*)
 FROM green_tripdata
 WHERE filename LIKE 'green_tripdata_2020-%';
 ```
-There are **1,734,051** rows.
 
 
 ## Question 5
