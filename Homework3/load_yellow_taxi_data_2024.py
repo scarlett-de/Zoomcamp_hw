@@ -16,7 +16,7 @@ buckets = list(client.list_buckets())
 print("Buckets in your project:", [bucket.name for bucket in buckets])
 
 BASE_URL = "https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-"
-MONTHS = [f"{i:02d}" for i in range(3, 4)] 
+MONTHS = [f"{i:02d}" for i in range(1, 7)] 
 DOWNLOAD_DIR = "."
 
 CHUNK_SIZE = 4 * 1024 * 1024  
