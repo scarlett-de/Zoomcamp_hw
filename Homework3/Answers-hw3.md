@@ -37,3 +37,16 @@ Then I run below query to count records of 2024 yellow taxi， the count is **20
 ```sql
 select count(*) from `demo_dataset_hw3.yellow_taxi_table`
 ```
+## Question 2
+I run below two queries to count distinct PULocationID:
+```sql
+select count(distinct PULocationID) from demo_dataset_hw3.yellow_taxi_external
+```
+
+```sql
+select count(distinct PULocationID) from demo_dataset_hw3.yellow_taxi_table
+```
+
+and then I check information under job information. 
+
+**0 MB for the External Table and 155.12 MB for the Materialized Table**
