@@ -50,3 +50,26 @@ select count(distinct PULocationID) from demo_dataset_hw3.yellow_taxi_table
 and then I check information under job information. 
 
 **0 MB for the External Table and 155.12 MB for the Materialized Table**
+
+## Question 3
+I run below query to retrive PULocationID, and retrive both PULocationID and DOLocationID:
+
+```sql
+select PULocationID from demo_dataset_hw3.yellow_taxi_table
+```
+
+```sql
+select PULocationID,DOLocationID from demo_dataset_hw3.yellow_taxi_table
+```
+Bytes processed of above two queries are 155.12 mb, 310.24 mb respectively. 
+
+Reason is BigQuery is a columnar database, and it only scans the specific columns requested in the query. Querying two columns (PULocationID, DOLocationID) requires reading more data than querying one column (PULocationID), leading to a higher estimated number of bytes processed.
+
+## Question 4
+
+I run below query to count records which fare_amount= 0. 
+There is **8,333** records that fare_amount is 0. 
+
+```sql
+select count(*) from demo_dataset_hw3.yellow_taxi_external where fare_amount=0
+```
