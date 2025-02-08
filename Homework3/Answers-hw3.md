@@ -32,7 +32,7 @@ SELECT * FROM `modified-alloy-447921-n7.demo_dataset_hw3.yellow_taxi_external`;
 ```
 
 ## Question 1
-Then I run below query to count records of 2024 yellow taxi:
+Then I run below query to count records of 2024 yellow taxi， the count is **20,332,093**:
 
 ```sql
 select count(*) from `demo_dataset_hw3.yellow_taxi_table`
