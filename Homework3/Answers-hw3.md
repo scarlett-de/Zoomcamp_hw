@@ -16,7 +16,8 @@ then run the below command to run the python script to download and load data
 python3 /Users/yitian66/Documents/DE-Datacamp/Homework3/load_yellow_taxi_data_2024.py
 ```
 
-and then I run below query to create external and regular tables
+and then I run below query to create external and regular tables:
+
 ```sql
 CREATE OR REPLACE EXTERNAL TABLE `modified-alloy-447921-n7.demo_dataset_hw3.yellow_taxi_external`
 
