@@ -73,3 +73,52 @@ There is **8,333** records that fare_amount is 0.
 ```sql
 select count(*) from demo_dataset_hw3.yellow_taxi_external where fare_amount=0
 ```
+
+## Question 5
+
+**Partition by tpep_dropoff_datetime and Cluster on VendorID**. 
+
+Below is the code:
+
+```sql
+CREATE OR REPLACE TABLE `demo_dataset_hw3.yellow_taxi_table_partitioned`
+PARTITION BY DATE(tpep_dropoff_datetime)
+CLUSTER BY VendorID as (
+ SELECT * FROM `demo_dataset_hw3.yellow_taxi_table`)
+```
+
+## Quesiton 6
+Run the below two queries and compare the bytes processed. 
+
+**310.24 MB for non-partitioned table and 26.84 MB for the partitioned table.**
+
+```sql
+select distinct VendorID, tpep_dropoff_datetime
+from demo_dataset_hw3.yellow_taxi_table
+where date(tpep_dropoff_datetime) between '2024-03-01' and '2024-03-15'
+```
+
+```sql
+select distinct VendorID, tpep_dropoff_datetime
+from demo_dataset_hw3.yellow_taxi_table_partitioned
+where date(tpep_dropoff_datetime) between '2024-03-01' and '2024-03-15'
+```
+
+## Question 7
+**GCP Bucket** stores data of external tables. 
+
+## Question 8
+**False**
+
+Based on lecture we learned, below are the situations where we should use cluster and its limitations.
+
+- Columns you specify are used to colocate related data
+- Order of the column is important
+- The order of the specified columns determines the sort order of the data.
+- Clustering improves
+   - Filter queries
+   - Aggregate queries
+- Table with data size < 1 GB, don't show significant improvement with partitioning and clustering. May increase costs.
+- You can specify up to four clustering columns
+- Columns must be top-level col and non-repeated
+
