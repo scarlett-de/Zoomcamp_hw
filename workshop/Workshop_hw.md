@@ -18,8 +18,7 @@ Activate the virtual environment:
 ```ssh
 source ./env/bin/activate
 ```
-
-3. Install dlt library
+Install dlt library
 You can now install dlt in your virtual environment by running:
 
 ```ssh
@@ -27,6 +26,10 @@ You can now install dlt in your virtual environment by running:
 pip install "dlt[duckdb]"
 ```
 
+install all the necessary dependencies
+```ssh
+pip install duckdb pandas numpy pyarrow
+```
 
 ## Question 1. Check dlt version
 I ran below code to check dlt version. And the version is **__main__.py 1.6.1**.
