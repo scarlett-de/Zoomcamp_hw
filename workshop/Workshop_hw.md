@@ -37,3 +37,8 @@ I ran below code to check dlt version. And the version is **__main__.py 1.6.1**.
 python3 -m dlt --version
 ```
 
+## Question 2
+I ran the pipeline_dlt.py to load the data. 
+There are two tables created. One is the data loaded, another one is the data description table. 
+
+
