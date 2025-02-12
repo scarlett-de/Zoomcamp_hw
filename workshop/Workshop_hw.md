@@ -50,7 +50,7 @@ print(len(data))
 ```
 
 ## Question 4
-I run the below sql and the average minute is 12.3049
+I run the below sql and the average minute is **12.3049**
 ```python
 with pipeline.sql_client() as client:
     res = client.execute_sql(
