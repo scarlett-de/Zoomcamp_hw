@@ -42,3 +42,24 @@ I ran the pipeline_dlt.py to load the data.
 There are two tables created. One is the data loaded, another one is the data description table. 
 
 
+## Question 3
+I run below code to count the rows, there are **10,000** rows extracted.
+```python
+data = pipeline.dataset(dataset_type="default").rides.df()
+print(len(data))
+```
+
+## Question 4
+I run the below sql and the average minute is 12.3049
+```python
+with pipeline.sql_client() as client:
+    res = client.execute_sql(
+            """
+            SELECT
+            AVG(date_diff('minute', trip_pickup_date_time, trip_dropoff_date_time))
+            FROM rides;
+            """
+        )
+    # Prints column values of the first row
+    print(res)
+```
