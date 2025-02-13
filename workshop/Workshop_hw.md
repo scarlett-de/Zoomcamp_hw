@@ -39,7 +39,8 @@ python3 -m dlt --version
 
 ## Question 2
 I ran the pipeline_dlt.py to load the data. 
-There are two tables created. One is the data loaded, another one is the data description table. 
+There are **4** tables created. 
+![image](https://github.com/user-attachments/assets/db41a34e-5bf8-4d51-a39e-6cc4abd4b75d)
 
 
 ## Question 3
