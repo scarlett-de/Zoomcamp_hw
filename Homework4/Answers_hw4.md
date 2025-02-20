@@ -26,6 +26,15 @@ export DAYS_BACK=30
 
 If --vars is not provided, env_var("DAYS_BACK") is used.
 
+
+## Question 3: dbt Data Lineage and Execution
+
+The below option does not apply for materializing fct_taxi_monthly_zone_revenue:
+```ssh
+dbt run --select models/staging/+
+```
+
+## Question 4: dbt Macros and Jinja
 If neither is set, fall back to the default (30).
 
 
