@@ -37,7 +37,11 @@ dbt run --select models/staging/+
 
 ## Question 4: dbt Macros and Jinja
 
-the below statements are true to the models using it:
+If model_type == 'core', it must use DBT_BIGQUERY_TARGET_DATASET.
+
+If model_type is anything else, it tries DBT_BIGQUERY_STAGING_DATASET but will always fall back to DBT_BIGQUERY_TARGET_DATASET if DBT_BIGQUERY_STAGING_DATASET is not set.
+
+Therefore, the below statements are true to the models using it:
 
 Setting a value for DBT_BIGQUERY_TARGET_DATASET env var is mandatory, or it'll fail to compile
 
