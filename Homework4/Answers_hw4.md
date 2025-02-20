@@ -26,6 +26,7 @@ export DAYS_BACK=30
 
 If --vars is not provided, env_var("DAYS_BACK") is used.
 
+If neither is set, fall back to the default (30).
 
 ## Question 3: dbt Data Lineage and Execution
 
@@ -35,6 +36,14 @@ dbt run --select models/staging/+
 ```
 
 ## Question 4: dbt Macros and Jinja
-If neither is set, fall back to the default (30).
 
+the below statements are true to the models using it:
+
+Setting a value for DBT_BIGQUERY_TARGET_DATASET env var is mandatory, or it'll fail to compile
+
+When using core, it materializes in the dataset defined in DBT_BIGQUERY_TARGET_DATASET
+
+When using stg, it materializes in the dataset defined in DBT_BIGQUERY_STAGING_DATASET, or defaults to DBT_BIGQUERY_TARGET_DATASET
+
+When using staging, it materializes in the dataset defined in DBT_BIGQUERY_STAGING_DATASET, or defaults to DBT_BIGQUERY_TARGET_DATASET
 
