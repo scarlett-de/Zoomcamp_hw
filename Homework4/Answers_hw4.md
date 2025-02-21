@@ -51,3 +51,22 @@ When using stg, it materializes in the dataset defined in DBT_BIGQUERY_STAGING_D
 
 When using staging, it materializes in the dataset defined in DBT_BIGQUERY_STAGING_DATASET, or defaults to DBT_BIGQUERY_TARGET_DATASET
 
+## Question 5: Taxi Quarterly Revenue Growth
+Please see the quarterly revenue model built, 
+
+then I run the below code 
+```sql
+SELECT
+  pickup_yr_qrt,
+  service_type,
+  min(yoy_growth_percentage) as min_yoy_growth
+FROM
+  `dbt-project-451121.dbt_nytaxi.fct_taxi_trips_quarterly_revenue`
+  where pickup_yr=2020
+  group by pickup_yr_qrt,service_type
+
+  ORDER BY
+    min_yoy_growth DESC
+```
+then the result is: 
+**green: {best: 2020/Q1, worst: 2020/Q2}, yellow: {best: 2020/Q1, worst: 2020/Q2}**
