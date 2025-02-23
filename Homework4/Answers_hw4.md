@@ -80,3 +80,8 @@ green: {p97: 55.0, p95: 45.0, p90: 26.5}, yellow: {p97: 31.5, p95: 25.5, p90: 19
 ```
 
 ## Question 7: Top #Nth longest P90 travel time Location for FHV
+
+Please see then I got the below results, 
+
+For the Trips that respectively started from Newark Airport, SoHo, and Yorkville East, in November 2019, what are dropoff_zones with the 2nd longest p90 trip_duration:
+**LaGuardia Airport, Chinatown, Garment District**
