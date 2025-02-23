@@ -52,9 +52,8 @@ When using stg, it materializes in the dataset defined in DBT_BIGQUERY_STAGING_D
 When using staging, it materializes in the dataset defined in DBT_BIGQUERY_STAGING_DATASET, or defaults to DBT_BIGQUERY_TARGET_DATASET
 
 ## Question 5: Taxi Quarterly Revenue Growth
-Please see the quarterly revenue model built, 
+I built the fct_taxi_trips_quarterly_revenue.sql, then I run the below code:
 
-then I run the below code 
 ```sql
 SELECT
   pickup_yr_qrt,
@@ -81,7 +80,7 @@ green: {p97: 55.0, p95: 45.0, p90: 26.5}, yellow: {p97: 31.5, p95: 25.5, p90: 19
 
 ## Question 7: Top #Nth longest P90 travel time Location for FHV
 
-Please see then I got the below results, 
+Please see fhv_monthly_zone_traveltime_p90.sql then I got the below results, 
 
 For the Trips that respectively started from Newark Airport, SoHo, and Yorkville East, in November 2019, what are dropoff_zones with the 2nd longest p90 trip_duration:
 **LaGuardia Airport, Chinatown, Garment District**
