@@ -13,7 +13,7 @@ then I run `spark.version`, the output is: **'3.5.4'**
 
 I use th below code to download and repartition the Dataframe to 4 partitions and save it to parquet.
 
-```pyspark
+```python
 import pyspark
 from pyspark.sql import SparkSession
 
@@ -41,7 +41,7 @@ Then I check the file size, which is as below, closed to **25mb**
 
 
 ## Question 3: Count records
-```pyspark
+```python
 from pyspark.sql.functions import col
 
 df.filter(col("pickup_date") == "2024-10-15").count()
@@ -49,7 +49,7 @@ df.filter(col("pickup_date") == "2024-10-15").count()
 There were **128893** taxi trips on the 15th of October
 
 ## Question 4: Longest trip
-```pyspark
+```python
 df_with_diff = df.withColumn(
     "hours_diff", 
     (f.unix_timestamp("tpep_dropoff_datetime") - f.unix_timestamp("tpep_pickup_datetime")) / 3600
@@ -63,7 +63,7 @@ The length of the longest trip in the dataset was **162** hours.
 Local port 4040 shows the application's dashboard on Spark’s User Interface. 
 
 ## Question 6: Least frequent pickup location zone
-```pyspark
+```python
 !wget -O zone_lookup.csv "https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv"
 
 df_zones = spark.read \
