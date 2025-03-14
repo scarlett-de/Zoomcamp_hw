@@ -67,3 +67,24 @@ I run the script, it does not return me anything, so I change the last line to `
 
 then I get `True` as output which means Kafka is successfully connected.
 
+## Question 4. Sending the Trip Data
+
+```python
+file_path = "/Users/yitian66/Documents/DE-Datacamp/Week6/hw6/green_tripdata_2019-10.csv.gz"
+
+df = pd.read_csv(file_path, compression="gzip")
+
+selected_col=['lpep_pickup_datetime',
+'lpep_dropoff_datetime',
+'PULocationID',
+'DOLocationID',
+'passenger_count',
+'trip_distance',
+'tip_amount'
+]
+
+new_df=df[selected_col]
+
+print(new_df.head())
+```
+
