@@ -1,7 +1,8 @@
 ## Question 1: Redpanda version
 I run the command `docker exec -it redpanda-1 rpk help` and get the following result:
 
-`rpk is the Redpanda CLI & toolbox
+```ssh
+rpk is the Redpanda CLI & toolbox
 
 Usage:
   rpk [flags]
@@ -36,17 +37,19 @@ Flags:
   -v, --verbose                  Enable verbose logging
       --version                  version for rpk
 
-Use "rpk [command] --help" for more information about a command.`
+Use "rpk [command] --help" for more information about a command.
+```
 
 then I run `docker exec -it redpanda-1 rpk version` and get the following:
-` docker exec -it redpanda-1 rpk version
+```ssh
+ docker exec -it redpanda-1 rpk version
 
 Version:     v24.2.18
 Git ref:     f9a22d4430
 Build date:  2025-02-14T12:59:41Z
 OS/Arch:     linux/arm64
 Go version:  go1.23.1
-`
+```
 
 ## Question 2. Creating a topic
 
@@ -58,4 +61,9 @@ the output is
 TOPIC        STATUS
 green-trips  OK
 ```
+
+## Question 3. Connecting to the Kafka server
+I run the script, it does not return me anything, so I change the last line to `print(producer.bootstrap_connected())`.
+
+then I get `True` as output which means Kafka is successfully connected.
 
