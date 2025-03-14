@@ -87,4 +87,9 @@ new_df=df[selected_col]
 
 print(new_df.head())
 ```
+If I want to see messages sent in Kafka UI, I can run these commands:
+`brew install kafka`
 
+`brew services start kafka`
+
+`kafka-console-consumer --bootstrap-server localhost:9092 --topic green-trips --from-beginning`
