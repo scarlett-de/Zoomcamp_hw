@@ -1,3 +1,16 @@
+
+CREATE TABLE processed_events (
+    lpep_pickup_datetime VARCHAR,
+    lpep_dropoff_datetime VARCHAR,
+    event_hour TIMESTAMP,
+    PULocationID INT,
+    DOLocationID INT,
+    passenger_count INT,
+    trip_distance DOUBLE PRECISION,
+    tip_amount DOUBLE PRECISION
+);
+
+
 ## Question 1: Redpanda version
 I run the command `docker exec -it redpanda-1 rpk help` and get the following result:
 
