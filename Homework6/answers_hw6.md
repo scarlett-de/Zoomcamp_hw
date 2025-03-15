@@ -93,3 +93,5 @@ If I want to see messages sent to Kafka, I can run these commands:
 `brew services start kafka`
 
 `kafka-console-consumer --bootstrap-server localhost:9092 --topic green-trips --from-beginning`
+
+`docker compose exec jobmanager ./bin/flink run -py /opt/src/job/3.session.py --pyFiles /opt/src -d`
