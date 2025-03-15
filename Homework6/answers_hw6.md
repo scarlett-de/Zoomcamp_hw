@@ -14,7 +14,10 @@ CREATE TABLE processed_events (
     tip_amount NUMERIC
 );
 ```
-and then create a topic
+and then create a topic, then run `python3 src/producer/producer.py`
+and then run `docker compose exec jobmanager ./bin/flink run -py /opt/src/job/load.py --pyFiles /opt/src -d` to load data to processed_events table
+
+
 ## Question 1: Redpanda version
 I run the command `docker exec -it redpanda-1 rpk help` and get the following result:
 
