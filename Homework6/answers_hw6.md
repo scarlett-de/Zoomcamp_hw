@@ -2,12 +2,12 @@
 CREATE TABLE processed_events (
     lpep_pickup_datetime VARCHAR,
     lpep_dropoff_datetime VARCHAR,
-    event_hour TIMESTAMP,
     PULocationID INT,
     DOLocationID INT,
     passenger_count INT,
     trip_distance DOUBLE PRECISION,
-    tip_amount DOUBLE PRECISION
+    tip_amount DOUBLE PRECISION,
+	dropoff_timestamp TIMESTAMP(3)
 );
 
 
