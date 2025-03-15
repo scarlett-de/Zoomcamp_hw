@@ -1,5 +1,9 @@
 ## set up 
 
+docker stop $(docker ps -q)
+
+docker rm $(docker ps -aq)
+
 run `docker compose up --remove-orphans -d` to set up
 and then log into pgadmin and create following table 
 
