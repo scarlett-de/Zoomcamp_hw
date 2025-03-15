@@ -4,6 +4,10 @@ docker stop $(docker ps -q)
 
 docker rm $(docker ps -aq)
 
+`docker exec -it redpanda-1 rpk topic delete green-trips`
+
+`docker exec -it redpanda-1 rpk topic create green-trips`
+
 run `docker compose up --remove-orphans -d` to set up
 and then log into pgadmin and create following table 
 
@@ -23,6 +27,7 @@ and then create a topic: `docker exec -it redpanda-1 rpk topic create green-trip
 then run `python3 src/producer/producer.py`
 
 and then run `docker compose exec jobmanager ./bin/flink run -py /opt/src/job/load.py --pyFiles /opt/src -d` to load data to processed_events table
+`docker compose exec jobmanager ./bin/flink run -py /opt/src/job/session.py --pyFiles /opt/src -d`
 
 
 ## Question 1: Redpanda version
