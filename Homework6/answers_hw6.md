@@ -1,15 +1,15 @@
 
+```SQL
 CREATE TABLE processed_events (
     lpep_pickup_datetime VARCHAR,
     lpep_dropoff_datetime VARCHAR,
     PULocationID INT,
     DOLocationID INT,
     passenger_count INT,
-    trip_distance DOUBLE PRECISION,
-    tip_amount DOUBLE PRECISION,
-	dropoff_timestamp TIMESTAMP(3)
+    trip_distance NUMERIC,
+    tip_amount NUMERIC
 );
-
+```
 
 ## Question 1: Redpanda version
 I run the command `docker exec -it redpanda-1 rpk help` and get the following result:
