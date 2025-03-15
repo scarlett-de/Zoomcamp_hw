@@ -1,3 +1,7 @@
+## set up 
+
+run `docker compose up --remove-orphans -d` to set up
+and then log into pgadmin and create following table 
 
 ```SQL
 CREATE TABLE processed_events (
@@ -10,7 +14,7 @@ CREATE TABLE processed_events (
     tip_amount NUMERIC
 );
 ```
-
+and then create a topic
 ## Question 1: Redpanda version
 I run the command `docker exec -it redpanda-1 rpk help` and get the following result:
 
