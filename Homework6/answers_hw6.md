@@ -1,15 +1,8 @@
 ## set up 
 
-docker stop $(docker ps -q)
-
-docker rm $(docker ps -aq)
-
-`docker exec -it redpanda-1 rpk topic delete green-trips`
-
-`docker exec -it redpanda-1 rpk topic create green-trips`
-
 run `docker compose up --remove-orphans -d` to set up
 and then log into pgadmin and create following table 
+
 
 ```SQL
 CREATE TABLE processed_events (
@@ -30,14 +23,6 @@ CREATE TABLE aggregate_events (
      longest_streak INTEGER
 );
 ```
-
-and then create a topic: `docker exec -it redpanda-1 rpk topic create green-trips` 
-
-then run `python3 src/producer/producer.py`
-
-and then run `docker compose exec jobmanager ./bin/flink run -py /opt/src/job/load.py --pyFiles /opt/src -d` to load data to processed_events table
-`docker compose exec jobmanager ./bin/flink run -py /opt/src/job/session.py --pyFiles /opt/src -d`
-
 
 ## Question 1: Redpanda version
 I run the command `docker exec -it redpanda-1 rpk help` and get the following result:
@@ -110,29 +95,12 @@ then I get `True` as output which means Kafka is successfully connected.
 
 ## Question 4. Sending the Trip Data
 
-```python
-file_path = "/Users/yitian66/Documents/DE-Datacamp/Week6/hw6/green_tripdata_2019-10.csv.gz"
+run `python3 src/producer/producer.py` to send the csv data to kafka. the output is as following:
 
-df = pd.read_csv(file_path, compression="gzip")
-
-selected_col=['lpep_pickup_datetime',
-'lpep_dropoff_datetime',
-'PULocationID',
-'DOLocationID',
-'passenger_count',
-'trip_distance',
-'tip_amount'
-]
-
-new_df=df[selected_col]
-
-print(new_df.head())
+```ssh
+It takes 27.21238684654236 seconds to send the entire dataset and flush
+All messages sent to Kafka
 ```
-If I want to see messages sent to Kafka, I can run these commands:
-`brew install kafka`
 
-`brew services start kafka`
-
-`kafka-console-consumer --bootstrap-server localhost:9092 --topic green-trips --from-beginning`
-
-`docker compose exec jobmanager ./bin/flink run -py /opt/src/job/3.session.py --pyFiles /opt/src -d`
+## Question 5.
+Run `docker compose exec jobmanager ./bin/flink run -py /opt/src/job/session.py --pyFiles /opt/src -d` to calculate the longest_streak
