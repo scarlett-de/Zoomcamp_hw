@@ -1,5 +1,7 @@
 ## set up & process of running command
 
+All my codes are saved in hw6 folder. 
+
 run `docker compose up --remove-orphans -d` to set up
 and then log into pgadmin and create following table 
 
