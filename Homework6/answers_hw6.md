@@ -22,6 +22,15 @@ CREATE TABLE processed_events (
     tip_amount NUMERIC
 );
 ```
+
+```sql
+CREATE TABLE aggregate_events (
+     PULocationID INTEGER,
+     DOLocationID INTEGER,
+     longest_streak INTEGER
+);
+```
+
 and then create a topic: `docker exec -it redpanda-1 rpk topic create green-trips` 
 
 then run `python3 src/producer/producer.py`
