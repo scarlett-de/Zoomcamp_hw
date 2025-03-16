@@ -26,7 +26,7 @@ CREATE TABLE aggregate_events (
 );
 ```
 
-run `docker exec -it redpanda-1 rpk help` and then run `docker exec -it redpanda-1 rpk topic help` to create a topic
+run `docker exec -it redpanda-1 rpk topic create green-trips` to create a topic
 
 run `python3 src/producer/producer.py` to send the csv data to kafka.
 
