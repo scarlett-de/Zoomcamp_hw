@@ -28,7 +28,10 @@ CREATE TABLE aggregate_events (
 
 run `docker exec -it redpanda-1 rpk help` and then run `docker exec -it redpanda-1 rpk topic help` to create a topic
 
-run 
+run `python3 src/producer/producer.py` to send the csv data to kafka.
+
+run `docker compose exec jobmanager ./bin/flink run -py /opt/src/job/load.py --pyFiles /opt/src -d` to load processed data
+`docker compose exec jobmanager ./bin/flink run -py /opt/src/job/session.py --pyFiles /opt/src -d` to calcualte longest streak
 
 ## Question 1: Redpanda version
 I run the command `docker exec -it redpanda-1 rpk help` and get the following result:
