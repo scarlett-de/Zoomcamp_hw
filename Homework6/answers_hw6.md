@@ -1,4 +1,4 @@
-## set up 
+## set up & process of running command
 
 run `docker compose up --remove-orphans -d` to set up
 and then log into pgadmin and create following table 
@@ -23,6 +23,10 @@ CREATE TABLE aggregate_events (
      longest_streak INTEGER
 );
 ```
+
+run `docker exec -it redpanda-1 rpk help` and then run `docker exec -it redpanda-1 rpk topic help` to create a topic
+
+run 
 
 ## Question 1: Redpanda version
 I run the command `docker exec -it redpanda-1 rpk help` and get the following result:
@@ -104,3 +108,5 @@ All messages sent to Kafka
 
 ## Question 5.
 Run `docker compose exec jobmanager ./bin/flink run -py /opt/src/job/session.py --pyFiles /opt/src -d` to calculate the longest_streak
+
+the longest_streak is 44 with pick up location id and dropoff location id as 95.
