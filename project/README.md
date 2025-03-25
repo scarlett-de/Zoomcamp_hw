@@ -12,6 +12,23 @@ Demand Drivers – Determine what influences booking frequency, like number of r
 
 Traveler-Focused Insights – Help budget-conscious travelers find affordable yet high-quality stays by highlighting undervalued neighborhoods or room types.
 
+# Technology Used
+
+You don't have to limit yourself to technologies covered in the course. You can use alternatives as well:
+
+Infrastructure as code (IaC): Terraform
+Cloud: Google Cloud Platform (GCP)
+Batch processing: Spark
+Data Warehouse: BigQuery
+Data transformation: DBT Core
+Workflow orchestration: Airflow
+Containerizetion: Docker
+Data Visualization: Google Looker Studio
+
+
+
+
+
 
 # Steps of running the project
 
