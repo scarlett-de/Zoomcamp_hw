@@ -1,8 +1,8 @@
-# 
+# Project Overview
 
+The data I use is the New York City Airbnb Open Data from Kaggle: https://www.kaggle.com/code/fiolina/starter-new-york-city-airbnb-open-data-038f9f81-7.
 
-
-
+This project analyzes the 2019 NYC Airbnb Open Data to address key challenges in the short-term rental market, where pricing disparities and demand variations stem from factors like location, room type, and host activity. The project will analyze price trends and determine why some listings are higher than others and determine demand drivers as well. By analyzeing this, it will assist travelers in finding affordable options. 
 
 
 # Steps of running the project
