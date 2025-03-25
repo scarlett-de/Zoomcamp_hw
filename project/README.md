@@ -1,3 +1,12 @@
+# 
+
+
+
+
+
+
+# Steps of running the project
+
 # Set up GCP by usting Terraform
 
 ## set up service account and bucket
