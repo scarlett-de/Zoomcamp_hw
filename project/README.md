@@ -89,25 +89,25 @@ It contains the configuration information that DBT uses to connect to your datab
 
 # Step 5: workflow orchestration
 
-`pip install apache-airflow apache-airflow-providers-google dbt`
+`pip install dbt-core dbt-bigquery`
 
 `pip install apache-airflow-providers-google`
 
-`pip install apache-airflow==2.6.1 --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.6.1/constraints-3.11.txt"`
+`pip install apache-airflow==2.7.2 --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.7.2/constraints-3.11.txt"`
 
 `airflow db init`
 
 
 ```ssh
-airflow users create
-  --username admin
-  --firstname dezoomcamp
-  --lastname ww
-  --role Admin
-  --email ytwyolo66@gmail.com 
-  --password dezoomcamp  
+airflow users create\
+  --username admin\
+  --firstname dezoomcamp\
+  --lastname ww\
+  --role Admin\
+  --email ytwyolo66@gmail.com\ 
+  --password dezoomcamp\
   ```
-
+`airflow scheduler`
   `airflow webserver --port 8080`
 
 access ariflow web UI
