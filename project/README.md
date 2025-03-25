@@ -93,10 +93,6 @@ It contains the configuration information that DBT uses to connect to your datab
 
 `pip install apache-airflow-providers-google`
 
-`python3 -m venv airflow_env`
-
-`source airflow_env/bin/activate`
-
 `pip install apache-airflow==2.6.1 --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.6.1/constraints-3.11.txt"`
 
 `airflow db init`
