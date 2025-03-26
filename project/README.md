@@ -29,7 +29,17 @@ Traveler-Focused Insights – Help budget-conscious travelers find affordable ye
 - **Google Looker Studio - Data Visualization**: Created interactive dashboards in Google Looker Studio to visualize trends and distributions.
 
 
+# Project Architecture Overview
+Add a diagram
 
+Pipeflow details are as below:
+1) Load data to GCP
+2) Load data from GCP to BigQuery
+3) Create DBT models (staging and core), staging model is to transform data initially
+   core model is to create dimentional tables and fact tables that are ready to use to analyze.
+4) set up Airflow
+5) Create dashabord in Google Looker Studio
+   
 
 
 # Reproducbility: Steps of running the project
