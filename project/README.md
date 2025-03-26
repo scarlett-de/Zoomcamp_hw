@@ -14,35 +14,37 @@ Traveler-Focused Insights – Help budget-conscious travelers find affordable ye
 
 # Technology Used
 
--Infrastructure as code (IaC): **Terraform**
+-**Infrastructure as Code (IaC)**:
 
-Use to set up GCP account, bucket and dataset
+Used Terraform to automate GCP account setup, bucket creation, and dataset configuration.
 
--Cloud: **Google Cloud Platform (GCP)**
+-**Cloud Platform**:
 
-Use to store raw data
+Leveraged Google Cloud Platform (GCP) for scalable storage of raw Airbnb data.
 
--Batch processing: **Spark**
+-**Batch Processing**:
 
-use to batch process the raw data
+Processed raw data at scale using Apache Spark for efficient batch transformations.
 
--Data Warehouse: **BigQuery**
+-**Data Warehouse**:
 
--Data transformation: **DBT Core**
+Stored processed data in BigQuery for high-performance analytics and querying.
 
-use to transform raw data and create dimentional tables
+-**Data Transformation**:
 
--Workflow orchestration: **Airflow**
+Modeled data into dimensional tables using DBT Core for structured analytics.
 
-use to orchestrate the workflow of loading data to GCP and big query, and transform data
+-**Workflow Orchestration**:
 
--Containerizetion: **Docker**
+Automated end-to-end pipelines (GCP → BigQuery → DBT) with Airflow, ensuring reliability and scheduling.
 
-use to dockerization airflow setup and run
+-**Containerization**:
 
--Data Visualization: **Google Looker Studio**
+Deployed Airflow in a reproducible environment using Docker.
 
-use to visualize data
+-**Data Visualization**:
+
+Created interactive dashboards in Google Looker Studio to visualize trends and distributions.
 
 
 
