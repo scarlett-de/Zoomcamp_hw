@@ -14,17 +14,35 @@ Traveler-Focused Insights – Help budget-conscious travelers find affordable ye
 
 # Technology Used
 
-You don't have to limit yourself to technologies covered in the course. You can use alternatives as well:
+Infrastructure as code (IaC): **Terraform**
 
-Infrastructure as code (IaC): Terraform
-Cloud: Google Cloud Platform (GCP)
-Batch processing: Spark
-Data Warehouse: BigQuery
-Data transformation: DBT Core
-Workflow orchestration: Airflow
-Containerizetion: Docker
-Data Visualization: Google Looker Studio
+Use to set up GCP account, bucket and dataset
 
+Cloud: **Google Cloud Platform (GCP)**
+
+Use to store raw data
+
+Batch processing: **Spark**
+
+use to batch process the raw data
+
+Data Warehouse: **BigQuery**
+
+Data transformation: **DBT Core**
+
+use to transform raw data and create dimentional tables
+
+Workflow orchestration: **Airflow**
+
+use to orchestrate the workflow of loading data to GCP and big query, and transform data
+
+Containerizetion: **Docker**
+
+use to dockerization airflow setup and run
+
+Data Visualization: **Google Looker Studio**
+
+use to visualize data
 
 
 
