@@ -14,37 +14,21 @@ Traveler-Focused Insights – Help budget-conscious travelers find affordable ye
 
 # Technology Used
 
-- **Terraform - nfrastructure as Code (IaC)**:
+- **Terraform - infrastructure as Code (IaC)**: Used Terraform to automate GCP account setup, bucket creation, and dataset configuration.
 
-Used Terraform to automate GCP account setup, bucket creation, and dataset configuration.
+- **GCP - Cloud Platform**: Leveraged Google Cloud Platform (GCP) for scalable storage of raw Airbnb data.
 
-- **GCP - Cloud Platform**:
+- **Pyspark - Batch Processing**: Processed raw data at scale using Apache Spark for efficient batch transformations.
 
-Leveraged Google Cloud Platform (GCP) for scalable storage of raw Airbnb data.
+- **Big Query - Data Warehouse**: Stored processed data in BigQuery for high-performance analytics and querying.
 
-- **Pyspark - Batch Processing**:
+- **DBT Core - Data Transformation**: Modeled data into dimensional tables using DBT Core for structured analytics.
 
-Processed raw data at scale using Apache Spark for efficient batch transformations.
+- **Airflow - Workflow Orchestration**: Automated end-to-end pipelines (GCP → BigQuery → DBT) with Airflow, ensuring reliability and scheduling.
 
-- **Big Query - Data Warehouse**:
+- **Docker - Containerization**: Deployed Airflow in a reproducible environment using Docker.
 
-Stored processed data in BigQuery for high-performance analytics and querying.
-
-- **DBT Core - Data Transformation**:
-
-Modeled data into dimensional tables using DBT Core for structured analytics.
-
-- **Airflow - Workflow Orchestration**:
-
-Automated end-to-end pipelines (GCP → BigQuery → DBT) with Airflow, ensuring reliability and scheduling.
-
-- **Docker - Containerization**:
-
-Deployed Airflow in a reproducible environment using Docker.
-
-- **Google Looker Studio - Data Visualization**:
-
-Created interactive dashboards in Google Looker Studio to visualize trends and distributions.
+- **Google Looker Studio - Data Visualization**: Created interactive dashboards in Google Looker Studio to visualize trends and distributions.
 
 
 
