@@ -14,33 +14,33 @@ Traveler-Focused Insights – Help budget-conscious travelers find affordable ye
 
 # Technology Used
 
-Infrastructure as code (IaC): **Terraform**
+-Infrastructure as code (IaC): **Terraform**
 
 Use to set up GCP account, bucket and dataset
 
-Cloud: **Google Cloud Platform (GCP)**
+-Cloud: **Google Cloud Platform (GCP)**
 
 Use to store raw data
 
-Batch processing: **Spark**
+-Batch processing: **Spark**
 
 use to batch process the raw data
 
-Data Warehouse: **BigQuery**
+-Data Warehouse: **BigQuery**
 
-Data transformation: **DBT Core**
+-Data transformation: **DBT Core**
 
 use to transform raw data and create dimentional tables
 
-Workflow orchestration: **Airflow**
+-Workflow orchestration: **Airflow**
 
 use to orchestrate the workflow of loading data to GCP and big query, and transform data
 
-Containerizetion: **Docker**
+-Containerizetion: **Docker**
 
 use to dockerization airflow setup and run
 
-Data Visualization: **Google Looker Studio**
+-Data Visualization: **Google Looker Studio**
 
 use to visualize data
 
