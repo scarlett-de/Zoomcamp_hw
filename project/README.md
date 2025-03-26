@@ -19,7 +19,7 @@ Traveler-Focused Insights – Help budget-conscious travelers find affordable ye
 - **GCP - Cloud Platform**: Leveraged Google Cloud Platform (GCP) for scalable storage of raw Airbnb data.
 
 - **Big Query - Data Warehouse**: Stored processed data in BigQuery for high-performance analytics and querying.
-- 
+
 - **DBT Core - Batch Processing and Data Transformation**: Batch processed raw data, modeled data into dimensional tables using DBT Core for structured analytics.
 
 - **Airflow - Workflow Orchestration**: Automated end-to-end pipelines (GCP → BigQuery → DBT) with Airflow, ensuring reliability and scheduling.
