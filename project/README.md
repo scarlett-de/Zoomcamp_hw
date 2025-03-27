@@ -167,15 +167,9 @@ Compute Engine -> Compute Admin
 
 a json file with your keys will be downloaded, save it to the key folder
 
-## Create Bucket
 
-<img src="https://github.com/user-attachments/assets/bbf00993-43b0-412f-a623-0edf95db822c" alt="image" width="500">
+## create bucket and dataset using Terraform, see the terraform foler
 
-
-## Create Dataset
-Go to big query, and create datasets
-
-## or create using Terraform by setting bucket and dataset name, see the terraform foler
 I create three datasets, raw_dataset, staging_dataset and analytics_dataset to save tables in different stages
 
 I save raw data in raw_dataset and save transformed data in staging_dataset, and save the data that is ready for analysis in analytics_dataset. 
@@ -249,7 +243,7 @@ airflow users create\
 `airflow scheduler`
   `airflow webserver --port 8080`
 
-access ariflow web UI
+access ariflow web UI 
 
 
 
