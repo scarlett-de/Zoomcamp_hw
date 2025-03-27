@@ -7,7 +7,7 @@
   - [2. Data Transformation (dbt Core)](#2-data-transformation-dbt-core)
   - [3. Orchestration (Airflow)](#3-orchestration-airflow)
   - [4. Analytics (Looker Studio)](#4-analytics-looker-studio)
-- [Reproducbility: Steps of running the project](#Reproducbility:-Steps-of-running-th-project)
+- [Reproducbility: Steps of running the project](#Reproducbility:-Steps-of-running-the-project)
 
 
 
