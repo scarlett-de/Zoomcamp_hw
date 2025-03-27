@@ -30,6 +30,7 @@ Traveler-Focused Insights – Help budget-conscious travelers find affordable ye
 
 
 # End-to-End Data Pipeline Architecture
+
 Add a diagram
 
 
@@ -89,8 +90,6 @@ dim_locations: Geographic hierarchy (neighbourhood → neighbourhood_group)
 
 ## 3. Orchestration (Airflow)
 
-DAGs:
-
 Ingestion DAG:
 
 Triggers Python script to load new data from source to GCS/BigQuery
@@ -106,32 +105,22 @@ Handles dependencies (waits for raw data before transforming)
 
 ## 4. Analytics (Looker Studio)
 
-Executive Dashboards:
+Average Price by Room Type
 
-High-level metrics: Average prices by neighborhood, occupancy rates
+Number of reviews by Room Type
 
-Trend analysis of listings over time
+Price Distribution in Manhattan vs. Brooklyn
 
-Operational Views:
+Host ID with more number of views and their corrsponding averge prices. 
 
-Drill-down into host performance
 
-Availability analysis by room type
+![image](https://github.com/user-attachments/assets/17ea41de-420d-464c-9cd2-211226cb5065)
 
-Ad-Hoc Exploration:
+![image](https://github.com/user-attachments/assets/e2a2dac4-cda2-49d1-b677-134aac985f49)
 
-Filterable by date, region, property type
+![image](https://github.com/user-attachments/assets/89fe25a8-7cf3-4755-a494-e081f3f69f46)
 
-Custom calculations (e.g., revenue projections)
-
-Performance Optimization:
-
-Leverages BigQuery clustering for fast queries
-
-Materialized views for complex joins
-
-Viewer/editor role separation
-
+![image](https://github.com/user-attachments/assets/694bbdf7-5037-42e5-9119-bb5091e684a2)
 
 ## 5. Maintenance & Evolution
 Metadata Management:
@@ -234,13 +223,7 @@ It contains the configuration information that DBT uses to connect to your datab
 
 # Step 4 create dashboard
 
-![image](https://github.com/user-attachments/assets/17ea41de-420d-464c-9cd2-211226cb5065)
-
-![image](https://github.com/user-attachments/assets/e2a2dac4-cda2-49d1-b677-134aac985f49)
-
-![image](https://github.com/user-attachments/assets/89fe25a8-7cf3-4755-a494-e081f3f69f46)
-
-![image](https://github.com/user-attachments/assets/694bbdf7-5037-42e5-9119-bb5091e684a2)
+Go to Google Looker Studio and import the data from big query and build the charts.
 
 # Step 5: workflow orchestration
 
