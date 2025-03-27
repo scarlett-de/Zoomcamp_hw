@@ -66,13 +66,11 @@ Standardizes column names (snake_case convention)
 
 Enforces consistent data types (e.g., ensuring price is numeric)
 
-Basic data cleansing (handling NULLs in last_review and reviews_per_month)
-
 Deduplication of records by primary key (id)
 
 **Core Layer** 
 (Star Schema)
-Fact Tables:
+- Fact Tables:
 
 fact_listings with business metrics (price, availability_365, number_of_reviews)
 
@@ -80,26 +78,17 @@ Explicit grain: one row per listing per time period
 
 Surrogate keys for relationships to dimensions
 
-Dimension Tables:
+- Dimension Tables:
 
 dim_hosts: Host information with SCD Type 2 tracking for changes
 
-dim_listings: Property characteristics (room_type, etc.)
+dim_room_type: Property characteristics (room_type, etc.)
 
 dim_locations: Geographic hierarchy (neighbourhood → neighbourhood_group)
 
 
-**Data Quality Framework**:
-
-Built-in tests for uniqueness (listing IDs), not null constraints (critical fields)
-
-Referential integrity between facts and dimensions
-
-Custom business rules (e.g., price > 0, valid latitude/longitude)
-
-Recency checks to ensure incremental loads contain fresh data
-
 ## 3. Orchestration (Airflow)
+
 DAGs:
 
 Ingestion DAG:
@@ -206,6 +195,9 @@ then run `terraform init` `terraform plan -out=tfplan` and `terraform apply tfpl
 # Step 2: Load data from Kaggle to GCP and big query
 
 not sure how to download frim kaggle automatically, will try to figure out later. 
+run bellow code
+
+`export GOOGLE_APPLICATION_CREDENTIALS="/Users/yitian66/Documents/DE-Datacamp/Project/terraform/keys/my_creds.json"`
 
 create load.py to load csv data to gcs and create regular table in big_query.
 
@@ -238,7 +230,7 @@ It contains the configuration information that DBT uses to connect to your datab
 
 5. the sql files saved in staging and core folders will be the table names loaded to big query.
 
-6. `dbt run -m`
+6. `dbt run`
 
 # Step 4 create dashboard
 
