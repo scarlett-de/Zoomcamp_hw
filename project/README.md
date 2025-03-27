@@ -6,7 +6,7 @@
   - [1. Data Ingestion (GCP Pipeline)](#1-data-ingestion-gcp-pipeline)
   - [2. Data Transformation (dbt Core)](#2-data-transformation-dbt-core)
   - [3. Orchestration (Airflow)](#3-orchestration-airflow)
-  - [4. Analytics (Looker Studio)](#4-analytics-looker-studio)
+  - [4. Dashboard (Looker Studio)](#4-Dashboard-looker-studio)
 - [Reproducibility: Steps of running the project](#reproducibility-steps-of-running-the-project)
 
 
@@ -116,7 +116,7 @@ Executes dbt runs in sequence: staging → core models
 Handles dependencies (waits for raw data before transforming)
 
 
-## 4. Analytics (Looker Studio)
+## 4. Dashboard (Looker Studio)
 
 Average Price by neighbourhood
 
