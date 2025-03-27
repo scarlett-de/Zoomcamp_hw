@@ -238,6 +238,8 @@ It contains the configuration information that DBT uses to connect to your datab
 
 ![image](https://github.com/user-attachments/assets/e2a2dac4-cda2-49d1-b677-134aac985f49)
 
+![image](https://github.com/user-attachments/assets/89fe25a8-7cf3-4755-a494-e081f3f69f46)
+
 ![image](https://github.com/user-attachments/assets/694bbdf7-5037-42e5-9119-bb5091e684a2)
 
 # Step 5: workflow orchestration
