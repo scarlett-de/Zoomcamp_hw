@@ -29,17 +29,123 @@ Traveler-Focused Insights – Help budget-conscious travelers find affordable ye
 - **Google Looker Studio - Data Visualization**: Created interactive dashboards in Google Looker Studio to visualize trends and distributions.
 
 
-# Project Architecture Overview
+# End-to-End Data Pipeline Architecture
 Add a diagram
 
-Pipeflow details are as below:
-1) Load data to GCP
-2) Load data from GCP to BigQuery
-3) Create DBT models (staging and core), staging model is to transform data initially
-   core model is to create dimentional tables and fact tables that are ready to use to analyze.
-4) set up Airflow
-5) Create dashabord in Google Looker Studio
-   
+
+
+## 1. Data Ingestion (GCP Pipeline)
+
+**GCP Loading**
+Source:
+
+GCP Storage:
+
+Raw Zone: Unprocessed data in original csv format
+
+
+**BigQuery Loading**
+
+Partitioned by ingestion date (_PARTITIONTIME)
+
+Clustered by key dimensions (e.g., customer_id, date)
+
+Schema validation during load
+
+## 2. Data Transformation (dbt Core)
+**Staging Layer**
+Minimal Transformation:
+Standardize schemas (column names, data types)
+
+Basic data cleansing (NULL handling, deduplication)
+
+**Core Layer** 
+(Star Schema)
+Fact Tables:
+
+Business process metrics (e.g., sales, shipments)
+
+Grain explicitly defined (e.g., order line items)
+
+Surrogate keys for dimension relationships
+
+Dimension Tables:
+
+Conformed dimensions (e.g., customers, products)
+
+Slowly Changing Dimensions (SCD Type 2 for history tracking)
+
+Hierarchies (e.g., product categories, geographic regions)
+
+Data Quality Framework
+Built-in tests (uniqueness, not null, referential integrity)
+
+Custom business rule validations
+
+Recency checks for incremental loads
+
+## 3. Orchestration (Airflow)
+DAGs:
+
+Ingestion DAGs: Per-source data loads to GCS/BigQuery
+
+Transformation DAGs: Trigger dbt runs (staging → core)
+
+Monitoring DAGs: Data quality checks and alerts
+
+Dependencies:
+
+Ensure raw data lands before transformations execute
+
+Fail fast if quality checks fail
+
+Alerting:
+
+SLA misses for pipeline completion
+
+Anomalies in data volume or freshness
+
+## 4. Analytics (Looker Studio)
+Dashboard Design:
+
+Executive Summary: High-level KPIs with trend analysis
+
+Operational Views: Drill-down into process metrics
+
+Ad-Hoc Exploration: Filter by dimensions (date, region, product)
+
+Performance Optimization:
+
+BigQuery materialized views for complex queries
+
+Caching strategies for frequently accessed data
+
+Security:
+
+Row-level security (RLS) for sensitive data
+
+Viewer/editor role separation
+
+## 5. Maintenance & Evolution
+Metadata Management:
+
+Data lineage (sources → staging → core → dashboards)
+
+Schema change tracking
+
+Performance Tuning:
+
+BigQuery slot utilization monitoring
+
+Query optimization (partition pruning, clustering)
+
+Stakeholder Feedback:
+
+Monthly reviews of pipeline reliability
+
+Quarterly prioritization of new data sources/metrics
+
+
 
 
 # Reproducbility: Steps of running the project
@@ -114,7 +220,7 @@ It contains the configuration information that DBT uses to connect to your datab
 
 5. the sql files saved in staging and core folders will be the table names loaded to big query.
 
-6. `dbt run -m core`
+6. `dbt run -m`
 
 # Step 4 create dashboard
 
