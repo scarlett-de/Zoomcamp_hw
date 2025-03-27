@@ -1,14 +1,13 @@
 ### Table of Contents  
 
-
-- [Project Overview](#Project Overview)
-- [Technology Used](#Technology Used)
-- [End-to-End Data Pipeline Architecture](#End-to-End Data Pipeline Architecture)
-  - [1. Data Ingestion](#1. Data Ingestion (GCP Pipeline))
-  - [2. Data Transformation (dbt Core)](#2. Data Transformation (dbt Core))
-  - [3. Orchestration (Airflow)](#3. Orchestration (Airflow))
-  - [4. Analytics (Looker Studio)](4. Analytics (Looker Studio))
-
+- [Project Overview](#project-overview)
+- [Technology Used](#technology-used)
+- [End-to-End Data Pipeline Architecture](#end-to-end-data-pipeline-architecture)
+  - [1. Data Ingestion (GCP Pipeline)](#1-data-ingestion-gcp-pipeline)
+  - [2. Data Transformation (dbt Core)](#2-data-transformation-dbt-core)
+  - [3. Orchestration (Airflow)](#3-orchestration-airflow)
+  - [4. Analytics (Looker Studio)](#4-analytics-looker-studio)
+- [Reproducbility: Steps of running the project](#Reproducbility:-Steps-of-running-th-project)
 
 
 
