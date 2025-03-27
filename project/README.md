@@ -1,3 +1,9 @@
+# Table of Contents  
+- [Project Overview](#Project Overview)  
+- [Technology Used](#Technology Used)  
+- [End-to-End Data Pipeline Architecture](#End-to-End Data Pipeline Architecture)  
+- [Usage](#usage)  
+
 # Project Overview
 
 The data I use is the New York City Airbnb Open Data from Kaggle: https://www.kaggle.com/code/fiolina/starter-new-york-city-airbnb-open-data-038f9f81-7.
