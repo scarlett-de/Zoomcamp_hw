@@ -188,7 +188,7 @@ I create three datasets, raw_dataset, staging_dataset and analytics_dataset to s
 
 I save raw data in raw_dataset and save transformed data in staging_dataset, and save the data that is ready for analysis in analytics_dataset. 
 
-then run `terraform init` `terraform plan -out=tfplan` and `terraform apply tfplan`
+then run `terraform init`, `terraform plan` and `terraform apply`
 
 # Step 2: Load data from Kaggle to GCP and big query
 
