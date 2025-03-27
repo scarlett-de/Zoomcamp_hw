@@ -36,95 +36,113 @@ Add a diagram
 
 ## 1. Data Ingestion (GCP Pipeline)
 
+Source: CSV file containing NYC Airbnb listings data with fields like id, name, host information, location details, pricing, and availability.
+
 **GCP Loading**
-Source:
 
-GCP Storage:
+Python script uploads the raw CSV file to Google Cloud Storage (GCS) in the "Raw Zone"
 
-Raw Zone: Unprocessed data in original csv format
+File retains original format without transformation
 
 
 **BigQuery Loading**
 
-Partitioned by ingestion date (_PARTITIONTIME)
+Same script loads data from GCS into BigQuery raw_dataset.ny_airbnb_raw table
 
-Clustered by key dimensions (e.g., customer_id, date)
+Table is partitioned by ingestion date (_PARTITIONTIME) for efficient time-based queries
 
-Schema validation during load
+Clustered by key dimensions (like host_id, neighbourhood) for query optimization
+
+Schema validation occurs during load with autodetect enabled
+
+Configuration handles CSV quirks (headers, quoted fields, bad records)
 
 ## 2. Data Transformation (dbt Core)
 **Staging Layer**
-Minimal Transformation:
-Standardize schemas (column names, data types)
 
-Basic data cleansing (NULL handling, deduplication)
+First transformation of raw data with minimal changes:
+
+Standardizes column names (snake_case convention)
+
+Enforces consistent data types (e.g., ensuring price is numeric)
+
+Basic data cleansing (handling NULLs in last_review and reviews_per_month)
+
+Deduplication of records by primary key (id)
 
 **Core Layer** 
 (Star Schema)
 Fact Tables:
 
-Business process metrics (e.g., sales, shipments)
+fact_listings with business metrics (price, availability_365, number_of_reviews)
 
-Grain explicitly defined (e.g., order line items)
+Explicit grain: one row per listing per time period
 
-Surrogate keys for dimension relationships
+Surrogate keys for relationships to dimensions
 
 Dimension Tables:
 
-Conformed dimensions (e.g., customers, products)
+dim_hosts: Host information with SCD Type 2 tracking for changes
 
-Slowly Changing Dimensions (SCD Type 2 for history tracking)
+dim_listings: Property characteristics (room_type, etc.)
 
-Hierarchies (e.g., product categories, geographic regions)
+dim_locations: Geographic hierarchy (neighbourhood → neighbourhood_group)
 
-Data Quality Framework
-Built-in tests (uniqueness, not null, referential integrity)
 
-Custom business rule validations
+**Data Quality Framework**:
 
-Recency checks for incremental loads
+Built-in tests for uniqueness (listing IDs), not null constraints (critical fields)
+
+Referential integrity between facts and dimensions
+
+Custom business rules (e.g., price > 0, valid latitude/longitude)
+
+Recency checks to ensure incremental loads contain fresh data
 
 ## 3. Orchestration (Airflow)
 DAGs:
 
-Ingestion DAGs: Per-source data loads to GCS/BigQuery
+Ingestion DAG:
 
-Transformation DAGs: Trigger dbt runs (staging → core)
+Triggers Python script to load new data from source to GCS/BigQuery
 
-Monitoring DAGs: Data quality checks and alerts
+Runs on schedule (e.g., daily) or event-driven basis
 
-Dependencies:
+Transformation DAG:
 
-Ensure raw data lands before transformations execute
+Executes dbt runs in sequence: staging → core models
 
-Fail fast if quality checks fail
+Handles dependencies (waits for raw data before transforming)
 
-Alerting:
-
-SLA misses for pipeline completion
-
-Anomalies in data volume or freshness
 
 ## 4. Analytics (Looker Studio)
-Dashboard Design:
 
-Executive Summary: High-level KPIs with trend analysis
+Executive Dashboards:
 
-Operational Views: Drill-down into process metrics
+High-level metrics: Average prices by neighborhood, occupancy rates
 
-Ad-Hoc Exploration: Filter by dimensions (date, region, product)
+Trend analysis of listings over time
+
+Operational Views:
+
+Drill-down into host performance
+
+Availability analysis by room type
+
+Ad-Hoc Exploration:
+
+Filterable by date, region, property type
+
+Custom calculations (e.g., revenue projections)
 
 Performance Optimization:
 
-BigQuery materialized views for complex queries
+Leverages BigQuery clustering for fast queries
 
-Caching strategies for frequently accessed data
-
-Security:
-
-Row-level security (RLS) for sensitive data
+Materialized views for complex joins
 
 Viewer/editor role separation
+
 
 ## 5. Maintenance & Evolution
 Metadata Management:
