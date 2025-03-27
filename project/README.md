@@ -234,28 +234,11 @@ It contains the configuration information that DBT uses to connect to your datab
 
 # Step 4: workflow orchestration
 
-`pip install dbt-core dbt-bigquery`
+docker-compose file in ariflow folder is to set up airflow.
 
-`pip install apache-airflow-providers-google`
+run  `docker-compose up -d`
 
-`pip install apache-airflow==2.7.2 --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.7.2/constraints-3.11.txt"`
-
-`airflow db init`
-
-
-```ssh
-airflow users create\
-  --username admin\
-  --firstname dezoomcamp\
-  --lastname ww\
-  --role Admin\
-  --email ytwyolo66@gmail.com\ 
-  --password dezoomcamp\
-  ```
-`airflow scheduler`
-  `airflow webserver --port 8080`
-
-access ariflow web UI 
+and then go to localhost:8080 to access airflow web.
 
 # Step 5 create dashboard
 
