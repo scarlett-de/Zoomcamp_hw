@@ -198,7 +198,7 @@ run bellow code,  change to your own path
 
 `export GOOGLE_APPLICATION_CREDENTIALS="/Users/yourpath/Project/terraform/keys/my_creds.json"`
 
-run load.py to load csv data to gcs and create regular table in big_query.
+run `python3 load.py` to load csv data to gcs and then create regular table in big_query.
 
 # Step 3: dbt transformation
 
