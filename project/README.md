@@ -133,7 +133,8 @@ Number of reviews by Room Type
 
 Reviews per month and count of listings on last_review date
 
-![image](https://github.com/user-attachments/assets/694bbdf7-5037-42e5-9119-bb5091e684a2)
+<img src="https://github.com/user-attachments/assets/694bbdf7-5037-42e5-9119-bb5091e684a2" alt="image" width="500">
+
 
 
 ## 5. Maintenance & Evolution
