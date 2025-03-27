@@ -231,11 +231,8 @@ It contains the configuration information that DBT uses to connect to your datab
 
 6. `dbt run`
 
-# Step 4 create dashboard
 
-Go to Google Looker Studio and import the data from big query and build the charts.
-
-# Step 5: workflow orchestration
+# Step 4: workflow orchestration
 
 `pip install dbt-core dbt-bigquery`
 
@@ -259,6 +256,12 @@ airflow users create\
   `airflow webserver --port 8080`
 
 access ariflow web UI 
+
+# Step 5 create dashboard
+
+Go to Google Looker Studio and import the data from big query and build the charts.
+
+
 
 
 
