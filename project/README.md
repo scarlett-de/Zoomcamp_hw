@@ -146,6 +146,7 @@ Quarterly prioritization of new data sources/metrics
 
 
 # Reproducbility: Steps of running the project
+# Step 1. set up GCS
 
 ## create service account
 
