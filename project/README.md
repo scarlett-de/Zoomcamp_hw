@@ -120,20 +120,20 @@ Handles dependencies (waits for raw data before transforming)
 
 Average Price by neighbourhood
 
-![image](https://github.com/user-attachments/assets/0164c255-77f9-4165-b7f8-0dd07e37ccbc)
+<img src="https://github.com/user-attachments/assets/0164c255-77f9-4165-b7f8-0dd07e37ccbc" alt="image" width="600">
 
 Averge Price by Room Type
 
-![image](https://github.com/user-attachments/assets/f704c828-1185-479f-b446-81fc449ff583)
+<img src="https://github.com/user-attachments/assets/f704c828-1185-479f-b446-81fc449ff583" alt="image" width="600">
 
 Number of reviews by Room Type
 
-![image](https://github.com/user-attachments/assets/89fe25a8-7cf3-4755-a494-e081f3f69f46)
+<img src="https://github.com/user-attachments/assets/89fe25a8-7cf3-4755-a494-e081f3f69f46" alt="image" width="600">
 
 
 Reviews per month and count of listings on last_review date
 
-<img src="https://github.com/user-attachments/assets/694bbdf7-5037-42e5-9119-bb5091e684a2" alt="image" width="500">
+<img src="https://github.com/user-attachments/assets/694bbdf7-5037-42e5-9119-bb5091e684a2" alt="image" width="600">
 
 
 
