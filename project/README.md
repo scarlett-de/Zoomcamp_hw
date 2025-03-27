@@ -44,8 +44,7 @@ Traveler-Focused Insights – Help budget-conscious travelers find affordable ye
 
 # End-to-End Data Pipeline Architecture
 
-Add a diagram
-
+<img src="https://github.com/user-attachments/assets/e8f108b8-328d-4e46-b932-93809c472f80" alt="image" width="600">
 
 
 ## 1. Data Ingestion (GCP Pipeline)
