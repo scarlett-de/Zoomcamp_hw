@@ -105,22 +105,23 @@ Handles dependencies (waits for raw data before transforming)
 
 ## 4. Analytics (Looker Studio)
 
-Average Price by Room Type
+Average Price by neighbourhood
+
+![image](https://github.com/user-attachments/assets/0164c255-77f9-4165-b7f8-0dd07e37ccbc)
+
+Averge Price by Room Type
+
+![image](https://github.com/user-attachments/assets/f704c828-1185-479f-b446-81fc449ff583)
 
 Number of reviews by Room Type
 
-Price Distribution in Manhattan vs. Brooklyn
-
-Host ID with more number of views and their corrsponding averge prices. 
-
-
-![image](https://github.com/user-attachments/assets/17ea41de-420d-464c-9cd2-211226cb5065)
-
-![image](https://github.com/user-attachments/assets/e2a2dac4-cda2-49d1-b677-134aac985f49)
-
 ![image](https://github.com/user-attachments/assets/89fe25a8-7cf3-4755-a494-e081f3f69f46)
 
+
+Reviews per month and count of listings on last_review date
+
 ![image](https://github.com/user-attachments/assets/694bbdf7-5037-42e5-9119-bb5091e684a2)
+
 
 ## 5. Maintenance & Evolution
 Metadata Management:
