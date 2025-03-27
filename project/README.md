@@ -61,7 +61,7 @@ File retains original format without transformation
 
 **BigQuery Loading**
 
-Same script loads data from GCS into BigQuery raw_dataset.ny_airbnb_raw table
+Same script loads data from GCS into BigQuery raw_dataset as ny_airbnb_raw table
 
 Table is partitioned by ingestion date (_PARTITIONTIME) for efficient time-based queries
 
@@ -90,7 +90,6 @@ fact_listings with business metrics (price, availability_365, number_of_reviews)
 
 Explicit grain: one row per listing per time period
 
-Surrogate keys for relationships to dimensions
 
 - Dimension Tables:
 
@@ -178,35 +177,38 @@ Compute Engine -> Compute Admin
 
 <img src="https://github.com/user-attachments/assets/438e8cae-fed9-4652-ab5b-b1574a57d52c" alt="image" width="500">
 
-<img src="https://github.com/user-attachments/assets/021d74c9-a255-46e8-9ad2-9cd9fcc3fb01" alt="image" width="500">
+<img src="https://github.com/user-attachments/assets/021d74c9-a255-46e8-9ad2-9cd9fcc3fb01" alt="image" width="400">
 
 a json file with your keys will be downloaded, save it to the key folder
 
 
 ## create bucket and dataset using Terraform, see the terraform foler
 
+run `terraform init`, `terraform plan` and `terraform apply` to set up GCP
+
 I create three datasets, raw_dataset, staging_dataset and analytics_dataset to save tables in different stages
 
 I save raw data in raw_dataset and save transformed data in staging_dataset, and save the data that is ready for analysis in analytics_dataset. 
 
-then run `terraform init`, `terraform plan` and `terraform apply`
+
 
 # Step 2: Load data from Kaggle to GCP and big query
 
-not sure how to download frim kaggle automatically, will try to figure out later. 
-run bellow code
+run bellow code,  change to your own path
 
-`export GOOGLE_APPLICATION_CREDENTIALS="/Users/yitian66/Documents/DE-Datacamp/Project/terraform/keys/my_creds.json"`
+`export GOOGLE_APPLICATION_CREDENTIALS="/Users/yourpath/Project/terraform/keys/my_creds.json"`
 
-create load.py to load csv data to gcs and create regular table in big_query.
+run load.py to load csv data to gcs and create regular table in big_query.
 
 # Step 3: dbt transformation
 
 1. run `pip install dbt-core` to install dbt core
    
    and run `pip install dbt-bigquery`
+
+   change to your path and run
    
-   run `export GOOGLE_APPLICATION_CREDENTIALS="/Users/yitian66/Documents/DE-Datacamp/Project/terraform/keys/my_creds.json`
+   `export GOOGLE_APPLICATION_CREDENTIALS="/Users/yourpath/Project/terraform/keys/my_creds.json`
 
 3. Inside the project directory, create the necessary directories and files for your DBT project. 
 ```ssh
@@ -227,9 +229,9 @@ It contains the configuration information that DBT uses to connect to your datab
 
 4. create `dbt_project.yml` to configure dbt project name and models, which also state big query dataset/schema that will load staging and analytics tables in.
 
-5. the sql files saved in staging and core folders will be the table names loaded to big query.
+5. and then create models in staging and core folders. the sql files saved in staging and core folders will be the table names loaded to big query.
 
-6. `dbt run`
+6. run `dbt run`
 
 
 # Step 4: workflow orchestration
