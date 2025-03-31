@@ -64,7 +64,7 @@ Same load.py script loads data from GCS into BigQuery raw_dataset as ny_airbnb_r
 
 Table is ***partitioned*** by ingestion date (_PARTITIONTIME) for efficient time-based queries
 
-***Clustered**** by key dimensions (like host_id, neighbourhood) for query optimization
+***Clustered*** by key dimensions (like host_id, neighbourhood) for query optimization
 
 Schema validation occurs during load with autodetect enabled
 
