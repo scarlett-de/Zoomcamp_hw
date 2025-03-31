@@ -189,7 +189,7 @@ a json file with your keys will be downloaded, save it to the keys folder
 
 ## create bucket and dataset using Terraform, 
 
-see the [terraform]([https://github.com/scarlett-de/Zoomcamp_hw/tree/main/project/terraform ]) folder
+see the [terraform](https://github.com/scarlett-de/Zoomcamp_hw/tree/main/project/terraform) folder
 
 run `terraform init`, `terraform plan` and `terraform apply` to set up GCP
 
@@ -208,6 +208,8 @@ run bellow code,  change to your own path
 run `python3 load.py` to load csv data to gcs and then create regular table in big_query.
 
 # Step 3: dbt transformation
+
+please see [dbt_transform](https://github.com/scarlett-de/Zoomcamp_hw/tree/main/project/dbt_transform) folder
 
 1. run `pip install dbt-core` to install dbt core
    
@@ -242,6 +244,8 @@ It contains the configuration information that DBT uses to connect to your datab
 
 
 # Step 4: workflow orchestration
+
+please see [airflow](https://github.com/scarlett-de/Zoomcamp_hw/tree/main/project/airflow) folder
 
 docker-compose file in ariflow folder is to set up airflow.
 
