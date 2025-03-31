@@ -53,14 +53,14 @@ Source: CSV file containing NYC Airbnb listings data with fields like id, name, 
 
 **GCP Loading**
 
-Python script uploads the raw CSV file to Google Cloud Storage (GCS) in the "Raw Zone"
+Python script load.py saved in load folder uploads the raw CSV file to Google Cloud Storage (GCS) in the "Raw Zone"
 
 File retains original format without transformation
 
 
 **BigQuery Loading**
 
-Same script loads data from GCS into BigQuery raw_dataset as ny_airbnb_raw table
+Same load.py script loads data from GCS into BigQuery raw_dataset as ny_airbnb_raw table
 
 Table is partitioned by ingestion date (_PARTITIONTIME) for efficient time-based queries
 
@@ -73,6 +73,8 @@ Configuration handles CSV quirks (headers, quoted fields, bad records)
 ## 2. Data Transformation (dbt Core)
 **Staging Layer**
 
+Please see dbt_transform/modles/staging folder for the staging models
+
 First transformation of raw data with minimal changes:
 
 Standardizes column names (snake_case convention)
@@ -82,6 +84,9 @@ Enforces consistent data types (e.g., ensuring price is numeric)
 Deduplication of records by primary key (id)
 
 **Core Layer** 
+
+please see dbt_transform/modles/core folder for the core models
+
 (Star Schema)
 - Fact Tables:
 
@@ -100,6 +105,7 @@ dim_locations: Geographic hierarchy (neighbourhood → neighbourhood_group)
 
 
 ## 3. Orchestration (Airflow)
+Please see the airflow folder for work orchestration set up
 
 Ingestion DAG:
 
@@ -148,7 +154,7 @@ BigQuery slot utilization monitoring
 
 Query optimization (partition pruning, clustering)
 
-Stakeholder Feedback:
+Stakeholder Feedback ex:
 
 Monthly reviews of pipeline reliability
 
@@ -178,10 +184,12 @@ Compute Engine -> Compute Admin
 
 <img src="https://github.com/user-attachments/assets/021d74c9-a255-46e8-9ad2-9cd9fcc3fb01" alt="image" width="400">
 
-a json file with your keys will be downloaded, save it to the key folder
+a json file with your keys will be downloaded, save it to the keys folder
 
 
-## create bucket and dataset using Terraform, see the terraform foler
+## create bucket and dataset using Terraform, 
+
+see the [terraform]([https://github.com/scarlett-de/Zoomcamp_hw/tree/main/project/terraform ]) folder
 
 run `terraform init`, `terraform plan` and `terraform apply` to set up GCP
 
