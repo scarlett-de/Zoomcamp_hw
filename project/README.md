@@ -201,6 +201,8 @@ I save raw data in raw_dataset and save transformed data in staging_dataset, and
 
 # Step 2: Load data from Kaggle to GCP and big query
 
+please see [load](https://github.com/scarlett-de/Zoomcamp_hw/tree/main/project/load) folder
+
 run bellow code,  change to your own path
 
 `export GOOGLE_APPLICATION_CREDENTIALS="/Users/yourpath/Project/terraform/keys/my_creds.json"`
